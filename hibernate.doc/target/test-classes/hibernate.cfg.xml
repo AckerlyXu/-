@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+                                         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+ <session-factory name="">
+  <!-- 配置关于数据库连接的四个项 driverClass url username password -->
+  <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+  <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/hibernate</property>
+  <property name="hibernate.connection.username">root</property>
+  <property name="hibernate.connection.password">123</property>
+  <property name="hibernate.show_sql">true</property>
+  <property name="hibernate.format_sql">true</property>
+  <!-- hibernate的方言 -->
+  <property name="hibernate.dialect">org.hibernate.dialect.MySQL5InnoDBDialect</property>
+  <!-- 自动创建表 -->
+  <property name="hibernate.hbm2ddl.auto">create</property>
+  <mapping class="hibernate.doc.model.MyOrder"/>
+  <mapping class="hibernate.doc.model.OrderItem"/>
+  <mapping class="hibernate.doc.model.Student"/>
+ 
+ </session-factory>
+</hibernate-configuration>
